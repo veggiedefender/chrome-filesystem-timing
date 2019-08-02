@@ -40,8 +40,9 @@ const onInitFs = async (fs) => {
   for (let i = 0; i < NUM_MEASUREMENTS; i++) {
     timings.push(await runBenchmark(fs))
   }
-  alert('ready')
+
   console.log(timings)
+  alert('Results ready. Open the console to see timing data.')
 }
 
 window.webkitRequestFileSystem(window.TEMPORARY, SIZE, onInitFs)
