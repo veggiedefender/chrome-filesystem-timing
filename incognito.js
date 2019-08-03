@@ -42,7 +42,7 @@ const onInitFs = async (fs) => {
   }
 
   console.log(timings)
-  alert('Results ready. Open the console to see timing data.')
+  document.getElementById('results').innerText = JSON.stringify(timings)
 }
 
 window.webkitRequestFileSystem(window.TEMPORARY, SIZE, onInitFs)
