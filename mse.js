@@ -54,6 +54,7 @@ const onInitFs = async (fs) => {
     timings.push(await runBenchmark(fs))
   }
 
+  console.log(timings)
   const mse = computeMse(timings)
 
   if (mse <= 100) {
