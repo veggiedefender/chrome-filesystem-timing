@@ -1,3 +1,9 @@
+const chromeVersion = navigator.userAgent.match(/Chrom(e|ium)\/([0-9]+)\./)
+if (!chromeVersion || parseInt(chromeVersion[2], 10) < 76) {
+  alert('Please use Chrome/Chromium 76 or higher!')
+  throw new Error()
+}
+
 const largeStrings = [
   // These strings are 5000 characters long. I generated them by running
   // base64 /dev/urandom -w 0 | head -c 5000
